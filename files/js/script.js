@@ -65,6 +65,23 @@ function preventDefaultOnClick(){
 		e.preventDefault();
 	})
 }
+function bindVelocity(){
+  // bind click event to all internal page anchors
+  $('a[href*="#"]').on('click', function (e) {
+	var target = $(this).attr('href');
+	// If the target is not empty
+    if(target != '#'){
+		e.preventDefault();
+		e.stopPropagation();
+
+		// scroll to each target
+	    $(target).velocity("scroll", { 
+	      duration: 1000,
+	      offset: -120
+	    });
+    }
+  });
+}
 function setCopyrightYear(){
 	var theDate = new Date(); 
 	$(".year").text(theDate.getFullYear());
@@ -78,6 +95,7 @@ $(document).ready(function(){
 	toggleMobileNav();
 	preventDefaultOnClick();
 	setCopyrightYear();
+	bindVelocity();
 	changeBackgroundIndexOnScroll();
 	// Wait for page to load before enabling transitions 
 	// to stop elements from showing too early
