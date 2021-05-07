@@ -578,6 +578,9 @@ footer p {
 	main .container-wrap h1 span.driven-text {
 		display: block;
 	}
+	main .container-wrap {
+	    margin-bottom: 60px;
+	}
 	/*ABOUT*/
 	section.about .container-wrap {
 		padding: 0px 40px;

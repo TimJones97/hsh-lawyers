@@ -50,7 +50,7 @@ function changeBackgroundIndexOnScroll(){
 		$('.hero-overlay').css('z-index', '-1');
 	}
 	$(window).scroll(function(){
-		if($(document).scrollTop() > $(window).height()){
+		if($(document).scrollTop() > $(window).height() + 200){
 			$('.fixed-bg').css('z-index', '-1');
 			$('.hero-overlay').css('z-index', '-2');
 		}
@@ -82,6 +82,9 @@ function bindVelocity(){
     }
   });
 }
+function setWindowHeight(){
+	$("main").css('height', window.innerHeight + 'px');
+}
 function setCopyrightYear(){
 	var theDate = new Date(); 
 	$(".year").text(theDate.getFullYear());
@@ -96,6 +99,7 @@ $(document).ready(function(){
 	preventDefaultOnClick();
 	setCopyrightYear();
 	bindVelocity();
+	setWindowHeight();
 	changeBackgroundIndexOnScroll();
 	// Wait for page to load before enabling transitions 
 	// to stop elements from showing too early
