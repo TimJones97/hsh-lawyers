@@ -539,8 +539,11 @@ footer p {
 	text-decoration: none;
 	color: #4b4b4b;
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1300px){
 	/*NAV*/
+	.nav {
+		display: none;
+	}
 	.menu-toggle {
 	    display: inline;
 	}
