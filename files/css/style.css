@@ -601,7 +601,7 @@ footer p {
 @media only screen and (max-width: 767px){
 	/*GENERAL*/
 	.fixed-bg {
-		background: url('../img/home-page/urgent-bg.jpg') no-repeat center;
+		background-position: 40% 50%;
 	}
 	/*MAIN*/
 	main .container-wrap h1 {
