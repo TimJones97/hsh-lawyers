@@ -398,12 +398,14 @@ section.experience .values .value:hover i {
 	transform: scale3d(1.1, 1.1, 1.0) perspective(999px);
 }
 section.experience .values .value i {
+	margin-top: 10px;
 	margin-bottom: 20px;
 	font-size: 25px;
 	transition: all 0.3s ease;
 }
 section.experience .values .value p {
 	font-weight: 400;
+	font-size: 18px;
 }
 
 
