@@ -21,24 +21,13 @@ function toggleMobileNav(){
 	$('.menu-toggle').click(function(e){
 		e.preventDefault();
 		$('.mobile-nav').addClass('open');
-		if(!isMobile()){
-			$('section').addClass('blur');
-			$('main').addClass('blur');
-			$('nav').addClass('blur');
-		}
 	});
 	$('.close-btn').click(function(e){
 		e.preventDefault();
-		$('section').removeClass('blur');
-		$('main').removeClass('blur');
-		$('nav').removeClass('blur');
 		$('.mobile-nav').removeClass('open');
 	});
 	$('.body-overlay').click(function(){
 		$('.mobile-nav').removeClass('open');
-		$('section').removeClass('blur');
-		$('main').removeClass('blur');
-		$('nav').removeClass('blur');
 	});
 }
 function isMobile(){
@@ -49,23 +38,50 @@ function isMobile(){
 		return false;
 	}
 }
+function changeBackgroundIndexOnScroll(){
+	// Check scroll position on page load before 
+	// adding scroll listener
+	if($(document).scrollTop() > $(window).height()){
+		$('.fixed-bg').css('z-index', '-1');
+		$('.hero-overlay').css('z-index', '-2');
+	}
+	else {
+		$('.fixed-bg').css('z-index', '-2');
+		$('.hero-overlay').css('z-index', '-1');
+	}
+	$(window).scroll(function(){
+		if($(document).scrollTop() > $(window).height()){
+			$('.fixed-bg').css('z-index', '-1');
+			$('.hero-overlay').css('z-index', '-2');
+		}
+		else {
+			$('.fixed-bg').css('z-index', '-2');
+			$('.hero-overlay').css('z-index', '-1');
+		}
+	});
+}
 function preventDefaultOnClick(){
 	$('a').click(function(e){
 		e.preventDefault();
 	})
 }
+function setCopyrightYear(){
+	var theDate = new Date(); 
+	$(".year").text(theDate.getFullYear());
+}
 $(window).resize(function(){
 	// Remove styles that may have been applied on mobile/desktop
-	$('section').removeClass('blur');
-	$('main').removeClass('blur');
-	$('nav').removeClass('blur');
 	$('.mobile-nav').removeClass('open');
 });
 $(document).ready(function(){
 	smallNavOnScroll();
 	toggleMobileNav();
 	preventDefaultOnClick();
-	new universalParallax().init({
-	  speed: 2.0
-	});
+	setCopyrightYear();
+	changeBackgroundIndexOnScroll();
+	// Wait for page to load before enabling transitions 
+	// to stop elements from showing too early
+	setTimeout(function(){
+  		$("body").removeClass("no-anim");
+	}, 10);
 });
