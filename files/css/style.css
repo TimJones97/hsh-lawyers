@@ -455,14 +455,14 @@ section.services {
 }
 
 /*OFFER HOVER EFFECTS*/
-.offer:hover {
-	transform: scale3d(1.03, 1.03, 1.0) perspective(999px);
-}
 .offer:hover,
 .offer:hover picture {
+	transform: scale3d(1.03, 1.03, 1.0) perspective(999px);
 	box-shadow: 0 6px 20px #070707;
 }
-
+.offer:hover picture {
+	transform: scale3d(1.015, 1.015, 1.0) perspective(999px);
+}
 /*----------------URGENT SECTION----------------*/
 
 section.urgent {
@@ -478,10 +478,6 @@ section.urgent .container-wrap {
 	height: 100%;
 	z-index: 1;
 }
-section.urgent .container-wrap h1 {
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 400;
-}
 section.urgent .container-wrap h1 a {
 	font-size: inherit;
 	font-family: inherit;
@@ -493,8 +489,10 @@ section.urgent .container-wrap h1 a:hover {
 	color: #fff;
 }
 section.urgent .container-wrap h1:last-of-type {
+	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 300;
 	margin-top: 10px;
+	font-size: 30px;
 }
 .dark-overlay {
 	position: absolute;
@@ -618,8 +616,12 @@ footer p {
         width: 100%;
         margin-right: 0;
     }
+    /*URGENT*/
     section.urgent {
     	height: 300px;
+    }
+    section.urgent .container-wrap h1:last-of-type {
+    	font-size: 25px;
     }
     /*MOBILE NAV*/
     .mobile-nav .nav-item.call {
