@@ -38,7 +38,7 @@ section {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: url('../img/home-page/urgent-bg.jpg') no-repeat center;
+	background: url('../img/home-page/urgent-bg.jpg') no-repeat;
 	background-size: cover;
 }
 /*-----NAVBAR-----*/
@@ -107,7 +107,7 @@ section {
 }
 .nav-item.call {
     border: 1px solid #9b9b9b;
-    border-radius: 7px;
+    border-radius: 4px;
 	padding-left: 0px;
 	margin-left: 20px;
 	transform: translateZ(0) perspective(999px);
@@ -305,7 +305,7 @@ section.about {
     padding: 40px 0px;
 }
 section.about .container-wrap {
-	border-radius: 7px;
+	border-radius: 4px;
 	padding: 0px 120px 0px 40px;
 	overflow: hidden;
 	transform: translateZ(0) perspective(999px);
@@ -384,14 +384,14 @@ section.experience .values .value {
 	margin-bottom: 20px;
 	text-align: center;
 	color: #fff;
-	border-radius: 7px;
+	border-radius: 4px;
 	height: 150px;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
 	transition: all 0.3s ease;
 	transform: translateZ(0) perspective(999px);
 }
 section.experience .values .value:hover {
-	background: rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.2);
 	transform: scale3d(1.02, 1.02, 1.0) perspective(999px);
 }
 section.experience .values .value:hover i {
@@ -424,7 +424,7 @@ section.services {
 	width: 30%;
 	margin-right: 10px;
 	background: #1b1b1b;
-	border-radius: 7px;
+	border-radius: 4px;
 	margin-bottom: 15px;
 	text-align: center;
 	transition: all 0.5s ease;
@@ -437,7 +437,7 @@ section.services {
 	position: relative;
 	height: 120px;
 	width: calc(100% - 30px);
-	border-radius: 7px;
+	border-radius: 4px;
 	margin: 0 auto;
 	margin-top: 15px;
 	transition: all 0.5s ease;
@@ -580,7 +580,7 @@ footer p {
 	}
 	.flex-container {
 		flex-direction: column;
-		border-radius: 7px;
+		border-radius: 4px;
 		overflow: hidden;
 	}
 	.flex-container .right,
@@ -599,6 +599,10 @@ footer p {
 }
 
 @media only screen and (max-width: 767px){
+	/*GENERAL*/
+	.fixed-bg {
+		background: url('../img/home-page/urgent-bg.jpg') no-repeat center;
+	}
 	/*MAIN*/
 	main .container-wrap h1 {
 	    font-size: 40px;
