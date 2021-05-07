@@ -306,7 +306,7 @@ section.about {
 }
 section.about .container-wrap {
 	border-radius: 7px;
-	padding: 0px 70px 0px 40px;
+	padding: 0px 120px 0px 40px;
 	overflow: hidden;
 	transform: translateZ(0) perspective(999px);
 	transition: all 0.5s ease;
@@ -358,6 +358,7 @@ section.about .container-wrap:hover {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	transition: height 0.5s ease;
 }
 .handshake img {
     width: auto;
@@ -475,6 +476,10 @@ section.urgent .container-wrap {
 	height: 100%;
 	z-index: 1;
 }
+section.urgent .container-wrap h1 {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 400;
+}
 section.urgent .container-wrap h1 a {
 	font-size: inherit;
 	font-family: inherit;
@@ -486,7 +491,6 @@ section.urgent .container-wrap h1 a:hover {
 	color: #fff;
 }
 section.urgent .container-wrap h1:last-of-type {
-	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 300;
 	margin-top: 10px;
 }
@@ -540,13 +544,16 @@ footer p {
 	.navbar .container-wrap {
 		justify-content: space-between;
 	}
-	/*NAV*/
 	.navbar {
 	    height: 70px;
 	}
 	.navbar-brand,
 	.navbar-brand img {
 	    width: 55px;
+	}
+	/*ABOUT*/
+	.handshake {
+	    height: 670px;
 	}
 }
 @media only screen and (max-width: 991px){
