@@ -654,6 +654,10 @@ footer p {
 	.flex-container .right {
 	    padding: 20px;
 	}
+	/*EXPERIENCE*/
+	section.experience .values .value p {
+	    font-size: 16px;
+	}
 	/*MOBILE NAV*/
 	.mobile-nav .vertical-align {
 		width: 320px;
