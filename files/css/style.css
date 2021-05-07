@@ -485,6 +485,7 @@ section.urgent .container-wrap h1 a {
 	font-family: inherit;
 	cursor: pointer;
 	white-space: nowrap;
+	transition: unset;
 }
 section.urgent .container-wrap h1 a:hover {
 	text-decoration: none;
