@@ -397,6 +397,7 @@ section.experience .values .value {
 	background: rgba(255, 255, 255, 0.1);
 	transition: all 0.3s ease;
 	transform: translateZ(0) perspective(999px);
+	cursor: default;
 }
 section.experience .values .value:hover {
 	background: rgba(255, 255, 255, 0.2);
