@@ -309,7 +309,7 @@ main .hero-overlay {
 
 section.about {
     background: linear-gradient(90deg,#181b24,#17213a);
-    padding: 40px 0px;
+    padding: 40px 0px 0px;
 }
 section.about .container-wrap {
 	border-radius: 4px;
