@@ -618,6 +618,7 @@ footer p {
 	.fixed-bg,
 	.hero-overlay {
 		background-position: 40% 50% !important;
+		top: 0;
 	}
 	/*MAIN*/
 	main .container-wrap h1 {
