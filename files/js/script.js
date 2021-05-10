@@ -84,7 +84,7 @@ function bindVelocity(){
 			// scroll to each target
 		    $(target).velocity("scroll", { 
 		      duration: 1000,
-		      offset: -120
+		      offset: -119
 		    });
 		}
     }
