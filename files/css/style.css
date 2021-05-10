@@ -465,13 +465,13 @@ section.services {
 }
 
 /*OFFER HOVER EFFECTS*/
-.offer:hover,
-.offer:hover picture {
+.offer:hover{
 	transform: scale3d(1.03, 1.03, 1.0) perspective(999px);
 	box-shadow: 0 6px 20px #070707;
 }
 .offer:hover picture {
 	transform: scale3d(1.015, 1.015, 1.0) perspective(999px);
+	box-shadow: 0 6px 20px #070707;
 }
 /*----------------URGENT SECTION----------------*/
 
@@ -615,8 +615,9 @@ footer p {
 
 @media only screen and (max-width: 767px){
 	/*GENERAL*/
-	.fixed-bg {
-		background-position: 40% 50%;
+	.fixed-bg,
+	.hero-overlay {
+		background-position: 40% 50% !important;
 	}
 	/*MAIN*/
 	main .container-wrap h1 {

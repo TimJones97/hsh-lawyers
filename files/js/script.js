@@ -73,12 +73,20 @@ function bindVelocity(){
     if(target != '#'){
 		e.preventDefault();
 		e.stopPropagation();
-
-		// scroll to each target
-	    $(target).velocity("scroll", { 
-	      duration: 1000,
-	      offset: -120
-	    });
+		if(isMobile()){
+			// scroll to each target
+		    $(target).velocity("scroll", { 
+		      duration: 1000,
+		      offset: -70
+		    });
+		}
+		else {
+			// scroll to each target
+		    $(target).velocity("scroll", { 
+		      duration: 1000,
+		      offset: -120
+		    });
+		}
     }
   });
 }
