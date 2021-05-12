@@ -314,16 +314,16 @@ section.about {
 section.about .container-wrap {
 	border-radius: 4px;
 	padding: 0px 120px 0px 40px;
-	overflow: hidden;
-	/*transform: translateZ(0) perspective(999px);*/
-	transition: all 0.5s ease;
 }
 /*Enable for hover effect on info text*/
-/*section.about .container-wrap:hover {
+section.about .container-wrap .flex-container:hover {
 	transform: scale3d(1.01, 1.01, 1.0) perspective(999px);
-}*/
+}
 .flex-container {
 	display: flex;
+	transform: translateZ(0) perspective(999px);
+	transition: all 0.5s ease;
+	overflow: hidden;
 }
 .flex-container .left {
 	width: 50%;
