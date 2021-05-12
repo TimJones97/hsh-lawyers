@@ -522,10 +522,17 @@ footer {
 footer p.copyright {
 	color: #cecece;
 	font-weight: 400;
+	margin-bottom: 20px;
+}
+footer p:nth-child(2) {
+	margin-bottom: 10px;
 }
 footer p {
 	color: #bfbfbf;
 	font-weight: 400;
+}
+footer p:nth-child(5) {
+	margin-bottom: 0;
 }
 .footer-links {
 	display: flex;
@@ -547,6 +554,22 @@ footer p {
 	text-decoration: none;
 	color: #4b4b4b;
 }
+.social-links {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.social-links a:hover {
+	text-decoration: none;
+}
+.social-links a img {
+	width: 30px;
+	height: 30px;
+}
+.social-links a:first-of-type {
+	margin-right: 10px;
+}
+
+
 @media only screen and (max-width: 1300px){
 	/*NAV*/
 	.nav {
