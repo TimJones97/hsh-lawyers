@@ -17,7 +17,7 @@ body.no-anim * {
 	outline: none !important;
 }
 h1, h2, h3, h4 {
-	font-family: 'Halant', sans-serif;
+	font-family: 'DM Serif Text', sans-serif;
 	color: #fff;
 	transition: all 0.5s ease;
 }
@@ -473,6 +473,7 @@ section.services {
 	transform: scale3d(1.015, 1.015, 1.0) perspective(999px);
 	box-shadow: 0 6px 20px #070707;
 }
+
 /*----------------URGENT SECTION----------------*/
 
 section.urgent {

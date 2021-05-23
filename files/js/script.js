@@ -91,7 +91,9 @@ function bindVelocity(){
   });
 }
 function setWindowHeight(){
-	$("main").css('height', window.innerHeight + 'px');
+	if(isMobile()){
+		$("main").css('height', window.innerHeight + 'px');
+	}
 }
 function setCopyrightYear(){
 	var theDate = new Date(); 
