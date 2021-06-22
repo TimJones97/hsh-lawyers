@@ -1,22 +1,3 @@
-function smallNavOnScroll(){
-	//Check on the navbar on start
-	var scrollTop = $(document).scrollTop();
-	if(scrollTop > 5 || isMobile()){
-		$('.navbar').addClass('opaque');
-	}
-	else {
-		$('.navbar').removeClass('opaque');
-	}
-	$(window).scroll(function(){
-		var scrollTop = $(document).scrollTop();
-		if(scrollTop > 5 || isMobile()){
-			$('.navbar').addClass('opaque');
-		}
-		else {
-			$('.navbar').removeClass('opaque');
-		}
-	});
-}
 function toggleMobileNav(){
 	$('.menu-toggle').click(function(e){
 		e.preventDefault();
@@ -39,6 +20,9 @@ function isMobile(){
 	}
 }
 function changeBackgroundIndexOnScroll(){
+	// if(isHome()){
+
+	// }
 	// Check scroll position on page load before 
 	// adding scroll listener
 	if($(document).scrollTop() > $(window).height()){
@@ -59,11 +43,6 @@ function changeBackgroundIndexOnScroll(){
 			$('.hero-overlay').css('z-index', '-1');
 		}
 	});
-}
-function preventDefaultOnClick(){
-	$('a').click(function(e){
-		e.preventDefault();
-	})
 }
 function bindVelocity(){
   // bind click event to all internal page anchors
@@ -98,13 +77,14 @@ $(window).resize(function(){
 	$('.mobile-nav').removeClass('open');
 });
 $(document).ready(function(){
-	smallNavOnScroll();
 	toggleMobileNav();
-	preventDefaultOnClick();
 	setCopyrightYear();
 	bindVelocity();
 	setWindowHeight();
 	changeBackgroundIndexOnScroll();
+	if($('.about-page').length){
+		
+	}
 });
 // Wait for page to load before enabling transitions 
 // to stop elements from showing too early
