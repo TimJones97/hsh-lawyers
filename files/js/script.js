@@ -2,18 +2,18 @@ function smallNavOnScroll(){
 	//Check on the navbar on start
 	var scrollTop = $(document).scrollTop();
 	if(scrollTop > 5 || isMobile()){
-		$('.navbar').addClass('small');
+		$('.navbar').addClass('opaque');
 	}
 	else {
-		$('.navbar').removeClass('small');
+		$('.navbar').removeClass('opaque');
 	}
 	$(window).scroll(function(){
 		var scrollTop = $(document).scrollTop();
 		if(scrollTop > 5 || isMobile()){
-			$('.navbar').addClass('small');
+			$('.navbar').addClass('opaque');
 		}
 		else {
-			$('.navbar').removeClass('small');
+			$('.navbar').removeClass('opaque');
 		}
 	});
 }
@@ -71,22 +71,13 @@ function bindVelocity(){
 	var target = $(this).attr('href');
 	// If the target is not empty
     if(target != '#'){
-		e.preventDefault();
-		e.stopPropagation();
-		if(isMobile()){
+			e.preventDefault();
+			e.stopPropagation();
 			// scroll to each target
-		    $(target).velocity("scroll", { 
-		      duration: 1000,
-		      offset: -70
-		    });
-		}
-		else {
-			// scroll to each target
-		    $(target).velocity("scroll", { 
-		      duration: 1000,
-		      offset: -119
-		    });
-		}
+	    $(target).velocity("scroll", { 
+	      duration: 1000,
+	      offset: -70
+	    });
     }
   });
 }
@@ -111,9 +102,9 @@ $(document).ready(function(){
 	bindVelocity();
 	setWindowHeight();
 	changeBackgroundIndexOnScroll();
-	// Wait for page to load before enabling transitions 
-	// to stop elements from showing too early
-	setTimeout(function(){
-  		$("body").removeClass("no-anim");
-	}, 10);
 });
+// Wait for page to load before enabling transitions 
+// to stop elements from showing too early
+setTimeout(function(){
+		$("body").removeClass("no-anim");
+}, 10);
