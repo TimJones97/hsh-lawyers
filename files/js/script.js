@@ -85,6 +85,9 @@ function setWindowHeight(){
 	if(isMobile()){
 		$("main").css('height', window.innerHeight + 'px');
 	}
+	else {
+		$("main").css('height', 'auto');
+	}
 }
 function setCopyrightYear(){
 	var theDate = new Date(); 
