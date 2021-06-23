@@ -83,7 +83,7 @@ $(document).ready(function(){
 	setWindowHeight();
 	changeBackgroundIndexOnScroll();
 	if($('.about-page').length){
-		
+		$(".parallax").mkParallax();
 	}
 });
 // Wait for page to load before enabling transitions 
