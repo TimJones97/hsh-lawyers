@@ -43,6 +43,9 @@ b {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 }
+a:hover {
+	text-decoration: none;
+}
 span {
 	color: #fff;
 }
@@ -51,7 +54,7 @@ section {
 }
 hr {
 	border-top: 2px solid var(--yellow);
-	width: 50px;
+	width: 70px;
 	margin-bottom: 30px;
 }
 ul {
@@ -79,8 +82,10 @@ ul li:last-of-type {
 	border: unset;
 	background: var(--darkblue);
 	min-width: 130px;
+	cursor: pointer;
 }
 .solid-btn:hover {
+	color: #fff;
 	background: var(--darkerblue);
 }
 .mobile {
@@ -462,7 +467,7 @@ section.about {
 .flex-container .left h1 {
 	text-align: center;
 }
-.flex-container .left:before {
+/*.flex-container .left:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -473,7 +478,7 @@ section.about {
 	background-size: cover;
 	z-index: 0;
 	opacity: 0.8;
-}
+}*/
 /*Remove margin from last p element*/
 .flex-container p:last-of-type {
 	margin-bottom: 0px;
@@ -494,7 +499,7 @@ section.about {
 /*--------------EXPERIENCE SECTION--------------*/
 
 section.experience {
-    background: #fbfbfb;
+    background: #f4f4f4;
     border-top: 1px solid #e7e7e7;
 }
 section.experience .values {
@@ -709,15 +714,6 @@ section.urgent .container p {
 	font-weight: 300;
 	margin-top: 10px;
 }
-.dark-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba(0, 0, 0, 0.4);
-	z-index: 0;
-}
 
 /*----------------ABOUT PAGE----------------*/
 
@@ -798,9 +794,10 @@ main.banner-sml.people {
 }
 .person {
 	display: flex;
-	margin: 0px 15px 15px 0px;
+	margin: 0px 15px 30px 0px;
 	padding: 40px;
 	box-shadow: 0 0 15px -1px rgb(219 212 219);
+	background: #fff;
 }
 .person picture {
 	width: 100px;
@@ -843,7 +840,7 @@ main.banner-sml.practice {
 	background-repeat: no-repeat;
 }
 .practice-areas {
-	padding: 40px 0px;
+	padding: 40px 0px 0px;
 }
 section.area {
 	margin-bottom: 30px;
@@ -885,15 +882,43 @@ section.area {
 .area .right b {
 	font-size: 18px;
 }
+.area .right a.read-more {
+	text-decoration: underline;
+	display: block;
+	text-align: left;
+}
+.area .right a.read-more:hover {
+	color: #1b1b1b;
+}
+.area .right .solid-btn {
+	margin-left: 0;
+}
 
+/*For conveyancing text overflow*/
+.more {
+	overflow: hidden;
+	max-height: 0px;
+	margin-top: 0px;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.more.expand {
+	margin-top: 30px;
+	height: auto;
+	max-height: 1000px;
+	opacity: 1;
+}
 /*Only add margin to the conveyancing unordered lists*/
 #conveyancing ul {
 	margin-bottom: 20px;
 }
-
 .enquire {
     border-top: 1px solid #e7e7e7;
-	background: #fbfbfb;
+	background: #f4f4f4;
+}
+.contact-form {
+	width: 500px;
+	margin: 30px auto 0;
 }
 .contact-form * {
 	display: block;
@@ -903,10 +928,16 @@ section.area {
 	border-radius: 7px;
 	border: unset;
 	width: 100%;
-	padding: 5px 10px;
+	padding: 10px 20px;
 	margin-bottom: 10px;
-	background: #3b3b3b;
-	color: #fff;
+	background: #fff;
+	color: #000;
+	box-shadow: inset 0 2px 1px rgb(0 0 0 / 3%);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+}
+.contact-form input {
+	height: 40px;
 }
 .contact-form textarea {
 	height: 250px;
@@ -1004,6 +1035,9 @@ footer .footer-container.contact p a {
 }
 footer .footer-container.copyright {
 	flex-basis: 400px;
+}
+footer .footer-container.copyright p span {
+	font-weight: inherit;
 }
 footer p.copyright {
 	font-weight: 400;

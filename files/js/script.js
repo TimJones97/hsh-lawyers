@@ -72,6 +72,19 @@ function setCopyrightYear(){
 	var theDate = new Date(); 
 	$(".year").text(theDate.getFullYear());
 }
+function expandReadMore(){
+	$('.read-more').click(function(e){
+		e.preventDefault();
+		var currentText = $(this).text();
+		if(currentText == 'Read more'){
+			$(this).text('Read less');
+		}
+		else {
+			$(this).text('Read more');
+		}
+		$(this).next().toggleClass('expand');
+	});
+}
 $(window).resize(function(){
 	// Remove styles that may have been applied on mobile/desktop
 	$('.mobile-nav').removeClass('open');
@@ -82,9 +95,7 @@ $(document).ready(function(){
 	bindVelocity();
 	setWindowHeight();
 	changeBackgroundIndexOnScroll();
-	if($('.about-page').length){
-		$(".parallax").mkParallax();
-	}
+	expandReadMore();
 });
 // Wait for page to load before enabling transitions 
 // to stop elements from showing too early
