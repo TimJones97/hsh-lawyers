@@ -57,16 +57,25 @@ function bindVelocity(){
 	      duration: 1000,
 	      offset: -70
 	    });
+
+	    // If the anchor is the enquiry form,
+	    // automatically focus on the name field
+	    if(target == '#enquire-form'){
+	    	$('#name').focus();
+	    }
     }
   });
 }
 function setWindowHeight(){
-	if(isMobile()){
-		$("main").css('height', window.innerHeight + 'px');
-	}
-	else {
-		$("main").css('height', 'auto');
-	}
+	// Wait 400ms before setting window height
+	setTimeout(function(){
+		if(isMobile()){
+			$("main").css('height', window.innerHeight + 'px');
+		}
+		else {
+			$("main").removeAttr('style');
+		}
+	}, 400);
 }
 function setCopyrightYear(){
 	var theDate = new Date(); 
@@ -85,9 +94,39 @@ function expandReadMore(){
 		$(this).next().toggleClass('expand');
 	});
 }
+function fadeHeaders(){
+  var offset = $(window).height() / 3,
+  		offsetSml = $(window).height() / 4;
+
+	// For the hero home page section
+	$('main .container').css({
+	  'opacity': (offset - $(document).scrollTop()) / (offset)
+	});
+
+	// For every smaller banner on other pages
+  $('.banner-sml .container').css({
+    'opacity': (offsetSml - $(document).scrollTop()) / (offsetSml)
+  });
+}
+function createSlick(){
+	$('.slider').slick({
+	  centerPadding: '60px',
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  autoplay: false,
+	  // autoplay: true,
+	  autoplaySpeed: 4000,
+	  dots: true
+	});
+}
+$(window).scroll(function(){
+	fadeHeaders();
+});
 $(window).resize(function(){
 	// Remove styles that may have been applied on mobile/desktop
 	$('.mobile-nav').removeClass('open');
+	setWindowHeight();
+	$('.slider')[0].slick.refresh();
 });
 $(document).ready(function(){
 	toggleMobileNav();
@@ -96,7 +135,14 @@ $(document).ready(function(){
 	setWindowHeight();
 	changeBackgroundIndexOnScroll();
 	expandReadMore();
+	fadeHeaders();
+
+	// Only create the slider on the homepage
+	if($('.slider').length){
+		createSlick();
+	}
 });
+
 // Wait for page to load before enabling transitions 
 // to stop elements from showing too early
 setTimeout(function(){
