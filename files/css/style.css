@@ -71,19 +71,22 @@ ul li:last-of-type {
 	margin-bottom: 0px;
 }
 .solid-btn {
-	display: table;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto;
 	background: transparent;
 	margin-top: 30px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	border-radius: 60px;
-	padding: 10px 25px;
+	height: 50px;
+	width: fit-content;
 	color: #fff;
 	transition: all 0.4s ease;
 	border: unset;
 	background: var(--darkblue);
-	min-width: 130px;
+	min-width: 120px;
 	cursor: pointer;
 }
 .solid-btn:hover {
@@ -258,11 +261,20 @@ main.banner-sml.right .container {
 	display: inline-block;
 	background: unset;
 	border: unset;
-	height: 30px;
 	width: 30px;
 	padding: 0;
-	background: url('../img/general/menu.svg');
 }
+.nav-button .bar {
+    height: 4px;
+    width: 30px;
+    background: #fff;
+    display: block;
+    margin-bottom: 3px;
+    transition: background 0.3s ease, width 0.3s ease;
+}
+/*.nav-button .bar:last-of-type {
+    width: 25px;
+}*/
 /*----------------MOBILE NAV STYLES----------------*/
 
 .mobile-nav {
@@ -286,9 +298,14 @@ main.banner-sml.right .container {
     opacity: 1;
     pointer-events: all;
 }
+.mobile-nav .navbar-brand {
+	position: fixed;
+	top: 20px;
+	left: 40px;
+}
 .mobile-nav .close-btn {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	position: absolute;
     top: 20px;
 	right: 40px;
@@ -832,7 +849,8 @@ section.urgent .container p {
 	margin-top: 10px;
 }
 section.urgent .container .solid-btn {
-	margin-left: 0;
+	margin: 5px auto 0px 0px;
+	width: 180px;
 }
 
 /*----------------ABOUT PAGE----------------*/
@@ -1115,6 +1133,9 @@ footer .container {
 	justify-content: space-between;
 	padding-bottom: 20px;
 }
+footer .container b {
+	font-size: 16px;
+}
 footer .footer-container {
 	padding-left: 20px;
 }
@@ -1211,7 +1232,8 @@ footer p {
 		display: none;
 	}
 	.menu-toggle {
-	    display: inline;
+	    display: inline-flex;
+	    align-items: center;
 	}
 	.navbar .container {
 		justify-content: space-between;
@@ -1245,9 +1267,11 @@ footer p {
 	main .container h1 span.driven-text {
 		display: block;
 	}
+	main,
 	main .container {
 		height: 100vh;
 	    margin-bottom: 60px;
+	    min-height: unset;
 	}
 
 	/*ABOUT*/
@@ -1293,6 +1317,14 @@ footer p {
 	section.urgent .container {
 		flex-basis: 100%;
 	}
+	section.urgent .container h1,
+	section.urgent .container p {
+		text-align: center;
+		max-width: 100%;
+	}
+	section.urgent .container .solid-btn {
+		margin: 10px auto 0px;
+	}
 
 	/*FOOTER*/
 	footer .container { 
@@ -1332,6 +1364,9 @@ footer p {
 	.navbar .container {
 		padding: 0px 20px;
 	}
+	.navbar-brand {
+		margin-left: -5px;
+	}
 
 	/*MOBILE NAV*/
 	.mobile-nav .nav-item {
@@ -1341,13 +1376,20 @@ footer p {
 		font-size: 20px;
 		padding: 0 20px;
 	}
+	.mobile-nav .navbar-brand {
+		top: 12px;
+		left: 20px;
+	}
+	.mobile-nav .close-btn {
+	    right: 20px;
+	}
 
 	/*MAIN*/
 	main .container h1 {
 	    font-size: 40px;
 	}
 	main .container {
-    	margin-top: 60px; 
+    	margin-top: 30px; 
     	margin-bottom: 0px; 
 	}
 
@@ -1411,11 +1453,14 @@ footer p {
 	}
 
 	/*MOBILE NAV*/
-	.mobile-nav .vertical-align {
-		width: 320px;
+	.mobile-nav .navbar-brand {
+		left: 15px;
 	}
 	.mobile-nav .close-btn {
 	    right: 15px;
+	}
+	.mobile-nav .vertical-align {
+		width: 320px;
 	}
 	.mobile-nav .nav-item {
 		height: 60px;
@@ -1424,6 +1469,7 @@ footer p {
 		font-size: 22px;
 		padding: 0 15px;
 	}
+
 
 	/*MAIN*/
 	main .container h1 {

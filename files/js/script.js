@@ -124,9 +124,11 @@ $(window).scroll(function(){
 });
 $(window).resize(function(){
 	// Remove styles that may have been applied on mobile/desktop
-	$('.mobile-nav').removeClass('open');
+	if(!isMobile()){
+		$('.mobile-nav').removeClass('open');
+		$('.slider')[0].slick.refresh();
+	}
 	setWindowHeight();
-	$('.slider')[0].slick.refresh();
 });
 $(document).ready(function(){
 	toggleMobileNav();
