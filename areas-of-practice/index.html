@@ -69,26 +69,28 @@
       <a class="navbar-brand" href="/hsh-lawyers">
         <img src="/hsh-lawyers/files/img/general/hsh-logo-white.png">
       </a>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/hsh-lawyers">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hsh-lawyers/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hsh-lawyers/our-people">Our People</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hsh-lawyers/areas-of-practice">Areas of Practice</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hsh-lawyers/contact">Contact</a>
-        </li>
-        <li class="nav-item call">
-          <a class="nav-link" href="tel:07 5443 3201">CALL (07) 5443 3201</a>
-        </li>
-      </ul>
+      <div class="nav-container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/hsh-lawyers">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hsh-lawyers/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hsh-lawyers/our-people">Our People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hsh-lawyers/areas-of-practice">Areas of Practice</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hsh-lawyers/contact">Contact</a>
+          </li>
+          <li class="nav-item call">
+            <a class="nav-link" href="tel:07 5443 3201">CALL (07) 5443 3201</a>
+          </li>
+        </ul>
+      </div>
     </div>
     <main class="banner-sml practice" id="top">
       <div class="container">
@@ -228,7 +230,6 @@
             </div>
           </div>
         </section>
-        <!-- INSERT ESTATES HERE -->
         <section class="area" id="wills">
           <div class="container">
             <div class="left">
@@ -245,6 +246,43 @@
               <p>
                 To avoid losing control of how your estate is distributed, you should ensure that your will is always current. This is particularly important when selling or purchasing property and particularly when getting married and divorced or with the arrival of children and in a blended family situation.
               </p>
+              <a class="solid-btn" href="#enquire-form">Enquire</a>
+            </div>
+          </div>
+        </section>
+        <section class="area" id="estates">
+          <div class="container">
+            <div class="left">
+              <picture>
+                <img src="/hsh-lawyers/files/img/general/offerings/estates.png">
+              </picture>
+            </div>
+            <div class="right">
+              <h1>Estates</h1>
+              <hr>
+              <p>
+                Our team is skilled in preparing wills in both simple and complex estates. We ensure that as much as the law allows, that your wishes are expressed in a legal framework and that strategies are employed to protect your family from unnecessary financial or legal problems.
+              </p>
+              <p>
+                Close attention is paid to areas such as the guardianship of your children and choosing and enduring attorney. We also pay attention to your wishes regarding your medical treatment by utilizing Advanced Health Directives.
+              </p>
+              <a href="#" class="read-more">Read more</a>
+              <div class="more">
+                <p>
+                  <b>
+                    Deceased Estates and Trust Administration
+                  </b>
+                </p>
+                <p>
+                  When the time comes for your wishes to be carried out, we have the expertise to ensure the intentions expressed in your will are fully realized.
+                </p>
+                <p>
+                  In a practical sense, we can help your executor with such tasks as the collection of your assets, probate and transmission applications and the distribution of your estate. Having the professional services of an experienced team of lawyers will give your family peace of mind rather than putting your family under unnecessary stress at a difficult time .
+                </p>
+                <p>
+                  Professional administration of your estate is essential, particularly in these times of increased litigation and contesting of wills. Our experienced team will ensure the management of your estate is undertaken efficiently and effectively so that it will be clearly and easily understood by everyone involved.
+                </p>
+              </div>
               <a class="solid-btn" href="#enquire-form">Enquire</a>
             </div>
           </div>
@@ -287,7 +325,7 @@
               <h1>Conveyancing</h1>
               <hr>
               <p>
-                Buying and selling residential property is, arguably, the most significant legal transactions of your life. As such, it is important that you receive concise and straightforward advice on how best to deal with the legal issues that affect your transaction.
+                Buying and selling residential property is arguably one of the most significant legal transactions of your life. As such, it is important that you receive concise and straightforward advice on how best to deal with the legal issues that affect your transaction.
               </p>
               <a href="#" class="read-more">Read more</a>
               <div class="more">
@@ -351,8 +389,17 @@
         <hr>
         <p>Let us know how we can help you by filling out the form below.</p>
         <form class="contact-form" action="https://formspree.io/f/moqywzoz" method="POST">
-          <input id="name" placeholder="Name" type="text" name="FirstName" required>
+          <input id="name" placeholder="Name" type="text" name="First name" required>
           <input id="email" placeholder="Email" type="email" name="Email" required>
+          <select name="Category" required>
+            <option>Select Category</option>
+            <option value="Criminal Law">Criminal Law</option>
+            <option value="Criminal Law">Traffic Law</option>
+            <option value="Wills & Estates">Wills & Estates</option>
+            <option value="Enduring Powers of Attorney">Enduring Powers of Attorney</option>
+            <option value="Conveyancing">Conveyancing</option>
+            <option value="Other">Other</option>
+          </select>
           <textarea id="enquiry" placeholder="Enquiry" name="Enquiry" required></textarea>
           <button class="solid-btn" type="submit">Send</button>
         </form>
@@ -363,7 +410,7 @@
       </div>
       <div class="container">
         <h1>Need urgent legal advice or representation?</h1>
-        <p>Call HSH Lawyers now.</p>
+        <p>Call HSH Lawyers now</p>
         <a class="solid-btn" href="tel: 07 5443 3201">(07) 5443 3201</a>.
       </div>
       <div class="blue-bg"></div>

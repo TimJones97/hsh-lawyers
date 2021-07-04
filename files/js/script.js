@@ -45,8 +45,14 @@ function changeBackgroundIndexOnScroll(){
 	});
 }
 function bindVelocity(){
+	if(location.hash){
+		$(location.hash).velocity("scroll", { 
+		  duration: 1000,
+		  offset: -100
+		});
+	}
   // bind click event to all internal page anchors
-  $('a[href*="#"]').on('click', function (e) {
+  $('a[href^="#"]').on('click', function (e) {
 	var target = $(this).attr('href');
 	// If the target is not empty
     if(target != '#'){
@@ -71,9 +77,13 @@ function setWindowHeight(){
 	setTimeout(function(){
 		if(isMobile()){
 			$("main").css('height', window.innerHeight + 'px');
+
+			// Also set height of nav menu so that it doesn't get hidden
+			$(".nav-container").css('height', window.innerHeight + 'px');
 		}
 		else {
 			$("main").removeAttr('style');
+			$(".nav-container").removeAttr('style');
 		}
 	}, 400);
 }
