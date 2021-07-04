@@ -106,6 +106,7 @@ main.banner-sml {
 	display: flex;
 	flex-wrap: wrap;
 	z-index: -1;
+	backface-visibility: hidden;
 }
 main.banner-sml .container {
 	position: fixed;

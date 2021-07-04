@@ -20,9 +20,6 @@ function isMobile(){
 	}
 }
 function changeBackgroundIndexOnScroll(){
-	// if(isHome()){
-
-	// }
 	// Check scroll position on page load before 
 	// adding scroll listener
 	if($(document).scrollTop() > $(window).height()){
@@ -106,16 +103,18 @@ function expandReadMore(){
 }
 function fadeHeaders(){
   var offset = $(window).height() / 3,
-  		offsetSml = $(window).height() / 4;
+  		offsetSml = $(window).height() / 4,
+  		mainOpacity = (offset - $(document).scrollTop()) / offset,
+  		smlOpacity = (offset - $(document).scrollTop()) / offset;
 
 	// For the hero home page section
 	$('main .container').css({
-	  'opacity': (offset - $(document).scrollTop()) / (offset)
+	  'opacity': mainOpacity
 	});
 
 	// For every smaller banner on other pages
   $('.banner-sml .container').css({
-    'opacity': (offsetSml - $(document).scrollTop()) / (offsetSml)
+    'opacity': smlOpacity
   });
 }
 function createSlick(){
@@ -150,7 +149,7 @@ $(document).ready(function(){
 	fadeHeaders();
 
 	// Only create the slider on the homepage
-	if($('.slider').length){
+	if($('.slider').length > 0){
 		createSlick();
 	}
 });
