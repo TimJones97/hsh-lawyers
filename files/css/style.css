@@ -1,7 +1,7 @@
 /*--------------GENERAL STYLES--------------*/
 :root {
     --darkblue: #083053;
-    --darkerblue: #041e35;
+    --darkerblue: #04294a;
     --yellow: #f7d260;
 }
 body {
@@ -227,16 +227,16 @@ main.banner-sml.right .container {
 	margin-bottom: 0px;
 }
 .nav-item.call {
-    border: 2px solid var(--darkblue);
+    border: 2px solid #fff;
 	padding-left: 0px;
 	margin-left: 20px;
 	transform: translateZ(0) perspective(999px);
 	backface-visibility: hidden;
 	width: max-content;
 }
-.nav-item.call:hover {
+/*.nav-item.call:hover {
     border: 2px solid #fff;
-}
+}*/
 .nav-item.call .nav-link {
 	color: #fff;
 }
@@ -385,7 +385,7 @@ main {
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-	height: 80vh;
+	height: 85vh;
 	min-height: 600px;
 }
 main .hero-overlay {
