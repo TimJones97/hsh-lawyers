@@ -227,7 +227,7 @@ main.banner-sml.right .container {
 	margin-bottom: 0px;
 }
 .nav-item.call {
-    border: 1px solid #9b9b9b;
+    border: 2px solid var(--darkblue);
 	padding-left: 0px;
 	margin-left: 20px;
 	transform: translateZ(0) perspective(999px);
@@ -235,8 +235,7 @@ main.banner-sml.right .container {
 	width: max-content;
 }
 .nav-item.call:hover {
-    border: 1px solid #fff;
-	transform: scale3d(1.01, 1.01, 1.0) perspective(999px);
+    border: 2px solid #fff;
 }
 .nav-item.call .nav-link {
 	color: #fff;
@@ -248,7 +247,7 @@ main.banner-sml.right .container {
 	font-weight: 600;
 }
 .nav-link:hover {
-	color: #9b9b9b;
+	color: #acacac;
 }
 
 
@@ -944,6 +943,9 @@ main.banner-sml.people {
 	box-shadow: 0 0 15px -1px rgb(219 212 219);
 	background: #fff;
 }
+.person hr {
+	margin: 30px 0 20px;
+}
 .person picture {
 	width: 100px;
 	display: block;
@@ -1157,6 +1159,9 @@ section.contact .flex-container .left:after {
 }
 .contact-group p {
 	margin-bottom: 2px;
+}
+.contact-group b {
+	font-size: 16px;
 }
 
 .urgent.full .background-window {
@@ -1494,9 +1499,9 @@ footer p {
 	/*MAIN*/
 	main .container h1 {
 	    font-size: 40px;
+	    text-align: center;
 	}
 	main .container {
-    	margin-top: 30px; 
     	margin-bottom: 0px; 
 	}
 
@@ -1575,9 +1580,6 @@ footer p {
 
 
 	/*MAIN*/
-	main .container h1 {
-	    font-size: 30px;
-	}
 	main.banner-sml .background-window:after {
 		display: none;
 	}

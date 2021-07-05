@@ -50,8 +50,8 @@ function bindVelocity(){
 	}
   // bind click event to all internal page anchors
   $('a[href^="#"]').on('click', function (e) {
-	var target = $(this).attr('href');
-	// If the target is not empty
+		var target = $(this).attr('href');
+		// If the target is not empty
     if(target != '#'){
 			e.preventDefault();
 			e.stopPropagation();
@@ -64,6 +64,8 @@ function bindVelocity(){
 	    // If the anchor is the enquiry form,
 	    // automatically focus on the name field
 	    if(target == '#enquire-form'){
+	    	var category = $(this).attr('data-category');
+	    	$('select').prop('selectedIndex', category);
 	    	$('#name').focus();
 	    }
     }
@@ -103,9 +105,9 @@ function expandReadMore(){
 }
 function fadeHeaders(){
   var offset = $(window).height() / 3,
-  		offsetSml = $(window).height() / 4,
+  		offsetSml = $(window).height() / 4.5,
   		mainOpacity = (offset - $(document).scrollTop()) / offset,
-  		smlOpacity = (offset - $(document).scrollTop()) / offset;
+  		smlOpacity = (offsetSml - $(document).scrollTop()) / offsetSml;
 
 	// For the hero home page section
 	$('main .container').css({
