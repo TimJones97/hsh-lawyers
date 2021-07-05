@@ -1501,11 +1501,13 @@ footer p {
 
 	/*MAIN*/
 	main .container h1 {
-	    font-size: 40px;
-	    text-align: center;
+	    font-size: 32px;
 	}
 	main .container {
     	margin-bottom: 0px; 
+	}
+	main.banner-sml .container h1 {
+	    font-size: 40px;
 	}
 
 	/*ABOUT*/
