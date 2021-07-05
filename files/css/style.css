@@ -225,6 +225,8 @@ main.banner-sml.right .container {
 .nav-item {
 	padding-left: 20px;
 	margin-bottom: 0px;
+	display: flex;
+	align-items: center;
 }
 .nav-item.call {
     border: 2px solid #fff;
@@ -700,6 +702,7 @@ section.services {
 
 section.testimonials {
 	background: #f4f4f4;
+    border-top: 1px solid #e7e7e7;
 }
 .slider {
     z-index: 20;
