@@ -40,7 +40,7 @@ function changeBackgroundIndexOnScroll(){
 function bindVelocity(){
 	if(location.hash){
 		$(location.hash).velocity("scroll", { 
-		  duration: 1000,
+		  duration: 0,
 		  offset: -100
 		});
 	}
