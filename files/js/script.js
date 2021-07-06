@@ -120,8 +120,7 @@ function createSlick(){
 	  centerPadding: '60px',
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
-	  autoplay: false,
-	  // autoplay: true,
+	  autoplay: true,
 	  autoplaySpeed: 4000,
 	  dots: true
 	});
