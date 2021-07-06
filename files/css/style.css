@@ -236,6 +236,9 @@ main.banner-sml.right .container {
 	backface-visibility: hidden;
 	width: max-content;
 }
+.nav-item.call i {
+	margin-right: 5px;
+}
 /*.nav-item.call:hover {
     border: 2px solid #fff;
 }*/
