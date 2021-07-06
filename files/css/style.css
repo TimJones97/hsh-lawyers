@@ -617,7 +617,6 @@ section.experience .values .value:last-of-type {
 section.experience .values .value img {
 	width: 35px;
 	transition: transform 0.35s ease;
-	transform: translateZ(0) perspective(999px);
 }
 section.experience .values .value p {
 	font-weight: 400;
@@ -634,7 +633,7 @@ section.experience .values .value:hover:before {
 	background: var(--yellow);
 }
 section.experience .values .value:hover img {
-	transform: scale3d(1.1, 1.1, 1.0) perspective(999px);
+	/*transform: scale3d(1.1, 1.1, 1.0) perspective(999px);*/
 }
 section.experience .values .value:hover p {
 	color: #3b3b3b;
