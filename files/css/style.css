@@ -374,6 +374,7 @@ main.banner-sml.right .container {
 .fixed-bg {
 	position: fixed;
 	z-index: -2;
+	opacity: 0;
 	top: 0px;
 	left: 0;
 	width: 100%;
@@ -389,6 +390,7 @@ main {
 	overflow: hidden;
 	height: 85vh;
 	min-height: 600px;
+	transition: height 0.5s ease;
 }
 main .hero-overlay {
 	height: 100%;
@@ -658,6 +660,7 @@ section.services {
 	height: 150px;
 	background: #f4f4f4;
 	margin: 0px 15px 15px 0px;
+	padding: 0px 20px;
 	border: 1px solid transparent;
 	transition: all 0.3s ease;
 	transform: translateZ(0) perspective(999px);
@@ -1058,8 +1061,10 @@ section.area {
 	max-height: 1000px;
 	opacity: 1;
 }
-/*Only add margin to the conveyancing unordered lists*/
-#conveyancing ul {
+/*Only add margin to the conveyancing and commercial law unordered lists*/
+#conveyancing ul,
+#commercial ul,
+#business ul {
 	margin-bottom: 20px;
 }
 .enquire {
@@ -1583,7 +1588,6 @@ footer p {
 		padding: 0 15px;
 	}
 
-
 	/*MAIN*/
 	main.banner-sml .background-window:after {
 		display: none;
@@ -1657,6 +1661,9 @@ footer p {
 	.person:last-of-type {
 		margin-bottom: 0;
 	}
+	.person picture {
+		margin: 0px;
+	}
 	.person .left {
 		display: flex;
 		flex-direction: column;
@@ -1692,6 +1699,9 @@ footer p {
 	}
 	.contact-form {
 		width: 100%;
+	}
+	.split ul {
+		flex-basis: 100%;
 	}
 
 	/*CONTACT PAGE*/

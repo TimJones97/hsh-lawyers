@@ -12,7 +12,7 @@ function toggleMobileNav(){
 	});
 }
 function isMobile(){
-	if($(window).width() < 767){
+	if($(window).width() < 1300){
 		return true;
 	}
 	else {
@@ -23,23 +23,19 @@ function changeBackgroundIndexOnScroll(){
 	// Check scroll position on page load before 
 	// adding scroll listener
 	if($(document).scrollTop() > $(window).height()){
-		$('.fixed-bg').css('z-index', '-1');
+		$('.fixed-bg').css({
+			'z-index': '-1',
+			'opacity': '1'
+		});
 		$('.hero-overlay').css('z-index', '-2');
 	}
 	else {
-		$('.fixed-bg').css('z-index', '-2');
+		$('.fixed-bg').css({
+			'z-index': '-2',
+			'opacity': '0'
+		});
 		$('.hero-overlay').css('z-index', '-1');
 	}
-	$(window).scroll(function(){
-		if($(document).scrollTop() > $(window).height() + 200){
-			$('.fixed-bg').css('z-index', '-1');
-			$('.hero-overlay').css('z-index', '-2');
-		}
-		else {
-			$('.fixed-bg').css('z-index', '-2');
-			$('.hero-overlay').css('z-index', '-1');
-		}
-	});
 }
 function bindVelocity(){
 	if(location.hash){
@@ -132,14 +128,15 @@ function createSlick(){
 }
 $(window).scroll(function(){
 	fadeHeaders();
+	changeBackgroundIndexOnScroll();
 });
 $(window).resize(function(){
 	// Remove styles that may have been applied on mobile/desktop
 	if(!isMobile()){
 		$('.mobile-nav').removeClass('open');
 		$('.slider')[0].slick.refresh();
+		setWindowHeight();
 	}
-	setWindowHeight();
 });
 $(document).ready(function(){
 	toggleMobileNav();
