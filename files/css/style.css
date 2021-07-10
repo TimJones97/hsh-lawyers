@@ -236,11 +236,10 @@ main.banner-sml.right .container {
 	transform: translateZ(0) perspective(999px);
 	backface-visibility: hidden;
 	width: max-content;
-	transition: background 0.3s ease;
+	transition: all 0.3s ease;
 }
 .nav-item.call .nav-link, 
 .nav-item.call i {
-	transition: unset;
 	transition: color 0.3s ease;
 }
 .nav-item.call i {
@@ -248,6 +247,7 @@ main.banner-sml.right .container {
 }
 .nav-item.call:hover {
 	background: #fff;
+	border-radius: 60px;
 }
 .nav-item.call:hover .nav-link,
 .nav-item.call:hover i {
