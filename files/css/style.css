@@ -89,6 +89,7 @@ ul li:last-of-type {
 	background: var(--darkblue);
 	min-width: 120px;
 	cursor: pointer;
+	padding: 0 30px;
 }
 .solid-btn:hover {
 	color: #fff;
@@ -881,7 +882,9 @@ section.urgent .container p {
 }
 section.urgent .container .solid-btn {
 	margin: 20px auto 0px 0px;
-	width: 180px;
+}
+section.urgent .container .solid-btn i {
+	margin-right: 10px;
 }
 
 /*----------------ABOUT PAGE----------------*/
