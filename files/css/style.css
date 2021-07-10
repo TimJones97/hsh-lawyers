@@ -235,13 +235,23 @@ main.banner-sml.right .container {
 	transform: translateZ(0) perspective(999px);
 	backface-visibility: hidden;
 	width: max-content;
+	transition: background 0.3s ease;
+}
+.nav-item.call .nav-link, 
+.nav-item.call i {
+	transition: unset;
+	transition: color 0.3s ease;
 }
 .nav-item.call i {
 	margin-right: 5px;
 }
-/*.nav-item.call:hover {
-    border: 2px solid #fff;
-}*/
+.nav-item.call:hover {
+	background: #fff;
+}
+.nav-item.call:hover .nav-link,
+.nav-item.call:hover i {
+	color: var(--darkblue);
+}
 .nav-item.call .nav-link {
 	color: #fff;
 }
@@ -345,7 +355,7 @@ main.banner-sml.right .container {
 	align-items: center;
 	font-size: 32px;
 	color: #fff;
-	transition: all 0.5s ease;
+	transition: all 0.35s ease;
 	text-align: left;
 	padding: 0 40px;
 	height: 100%;
@@ -353,15 +363,22 @@ main.banner-sml.right .container {
 }
 .mobile-nav .nav-link:hover {
 	color: #2b6ca3;
+	background: #fff;
 }
 .mobile-nav .nav-item.call {
 	border: 0;
 	border-top: 1px solid #e7e7e7;
 	margin: 0;
 }
+.mobile-nav .nav-item.call i {
+	margin-right: 15px;
+}
 .mobile-nav .nav-item.call:hover {
 	background: unset;
 	transform: unset;
+}
+.mobile-nav .nav-item.call:hover i {
+	color: #fff;
 }
 .mobile-nav .nav-item.call:hover .nav-link {
 	color: #fff;
